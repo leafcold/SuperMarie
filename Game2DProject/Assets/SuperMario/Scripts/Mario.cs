@@ -35,11 +35,9 @@ public class Mario : MonoBehaviour
         Vector2 rigVelocity = rig.velocity;
         rigVelocity.x = horizontal * 2.5f;
         rig.velocity = rigVelocity;
-
         if (horizontal != 0)
         {
             spriteRenderer.flipX = horizontal > 0 ? false: true;
-
             anim.SetBool("IsRun", true);
         }
         else

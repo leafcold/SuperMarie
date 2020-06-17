@@ -46,6 +46,8 @@ public class Enemy : MonoBehaviour
         if (collision.tag == "Mario")
         {
             //需要写在主角触发器里面
+            //这里需要两次判断
+
             enemyAnim.SetTrigger("Die");
 
             collision.GetComponent<Rigidbody2D>().AddForce(transform.up*50);
